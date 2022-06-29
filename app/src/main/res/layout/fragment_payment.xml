@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".Fragment.PaymentFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/btnOrder"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/tab_layot_payment_frag"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_twotone_done_24"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnPayment"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/tab_layot_payment_frag"
+>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_outline_attach_money_24"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ptnDelivaery"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/tab_layot_payment_frag"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_outline_location_on_24"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_MyCard"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/tab_layot_payment_frag"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_outline_shopping_cart_24"
+
+                />
+        </FrameLayout>
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_100sdp"
+            app:constraint_referenced_ids="btn_MyCard,ptnDelivaery,btnPayment,btnOrder"
+            app:flow_horizontalAlign="center"
+            app:flow_horizontalBias="0"
+            app:flow_maxElementsWrap="4"
+            app:flow_verticalBias="0"
+            app:flow_verticalGap="8dp"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/myCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="My Cart"
+            android:textColor="#605F5F"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_MyCard"
+            app:layout_constraintEnd_toEndOf="@+id/btn_MyCard"
+            app:layout_constraintStart_toStartOf="@+id/btn_MyCard" />
+
+        <TextView
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Delivery"
+            android:textColor="#605F5F"
+
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/ptnDelivaery"
+            app:layout_constraintEnd_toEndOf="@+id/ptnDelivaery"
+            app:layout_constraintStart_toStartOf="@+id/ptnDelivaery" />
+
+        <TextView
+
+            android:id="@+id/Payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Payment"
+
+            android:textColor="#605F5F"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPayment"
+            app:layout_constraintEnd_toEndOf="@+id/btnPayment"
+            app:layout_constraintStart_toStartOf="@+id/btnPayment" />
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Order"
+            android:textColor="#605F5F"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btnOrder"
+            app:layout_constraintEnd_toEndOf="@+id/btnOrder"
+            app:layout_constraintStart_toStartOf="@+id/btnOrder" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/FragmentContaier"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/mainBtnToNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainBtnToNext"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="500dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/btnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

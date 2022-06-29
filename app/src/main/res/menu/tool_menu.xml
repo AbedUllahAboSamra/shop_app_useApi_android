@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toogle"
+        android:icon="@drawable/ic_outline_tapas_24"
+        android:iconTint="@color/black"
+        android:title="toogle"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/shopIcon"
+        android:icon="@drawable/ic_outline_shoppingtoolbar"
+        android:title="shop"
+        android:iconTint="@color/black"
+
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="shop"
+        android:iconTint="@color/black"
+
+        app:showAsAction="always" />
+</menu>
